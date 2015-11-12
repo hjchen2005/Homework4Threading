@@ -54,11 +54,13 @@ public class GuiApp implements Runnable{
 		
 		if(!Thread.currentThread().isInterrupted()){
 			try{
-				System.out.println("my thread created");
-				img1.setPath("EmpireState.jpg");
-				img2.setPath("LowerManhattan.jpg");
-				img3.setPath("TimesSquare.jpg");
+				System.out.println(name + " sleeping for %d\n");
+				makeGui();
+				img1.setPath("Images/EmpireState.jpg");
+				img2.setPath("Images/LowerManhattan.jpg");
+				img3.setPath("Images/TimesSquare.jpg");
 				Thread.sleep(time);
+				System.out.println(name+" is done");
 			}
 			catch(Exception e){
 				log.error("UnExpected Exception caught while running", e);
